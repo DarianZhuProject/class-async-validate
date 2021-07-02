@@ -1,0 +1,10 @@
+
+class BaseValidate{
+    check(){
+
+    }
+
+    setScene(){
+
+    }
+}

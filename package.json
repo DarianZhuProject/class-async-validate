@@ -1,0 +1,32 @@
+{
+  "name": "class-async-validate",
+  "version": "1.0.0",
+  "description": "this is class-async-validate",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DarianZhuProject/class-async-validate.git"
+  },
+  "keywords": [
+    "egg",
+    "async-validator",
+    "egg-plugins"
+  ],
+  "author": "aibayanyu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DarianZhuProject/class-async-validate/issues"
+  },
+  "homepage": "https://github.com/DarianZhuProject/class-async-validate#readme",
+  "devDependencies": {
+    "@types/node": "^15.14.0",
+    "typescript": "^4.3.5"
+  },
+  "dependencies": {
+    "async-validator": "^3.5.2"
+  }
+}
