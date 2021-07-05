@@ -26,6 +26,16 @@
     "@types/node": "^15.14.0",
     "typescript": "^4.3.5"
   },
+  "files": [
+    "src",
+    "src/index.d.ts",
+    "src/index.js",
+    "src/lib",
+    "src/lib/typing.d.ts",
+    "src/lib/validate.d.ts",
+    "src/lib/typing.js",
+    "src/lib/validate.js"
+  ],
   "dependencies": {
     "async-validator": "^3.5.2"
   }

@@ -1,5 +1,5 @@
-import { Rules } from "async-validator"
+import BaseValidate from "@/lib/validate";
 
-class Index{
-    rules:Rules = {}
+export {
+    BaseValidate
 }
