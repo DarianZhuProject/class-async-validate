@@ -38,8 +38,8 @@ export default class BaseValidate{
         try {
             await Schema.validate(data,options)
             return [null,true];
-        }catch (e) {
-            return [e,false];
+        }catch ({errors,fields}) {
+            return [{ errors, fields },false];
         }
     }
 
