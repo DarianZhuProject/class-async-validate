@@ -5,22 +5,18 @@ import AsyncValidator from "async-validator";
 /**
  * 验证器基类
  */
-export default class BaseValidate{
+export default abstract class BaseValidate{
     private sceneArr:SceneItem = null;
 
     /**
      * 规则
      */
-    rules():ValidateRules{
-        return{}
-    }
+    abstract rules():ValidateRules;
 
     /**
      * 场景
      */
-    scenes():Scenes{
-        return {}
-    }
+    abstract scenes():Scenes;
 
     /**
      * 校验规则
@@ -46,7 +42,7 @@ export default class BaseValidate{
     /**
      * 生成需要校验的规则
      */
-    createRules():ValidateRules{
+    private createRules():ValidateRules{
         // 判断当前是否存在验证场景
         if (this.sceneArr&&this.sceneArr.length>0){
             const rules:ValidateRules = {};
