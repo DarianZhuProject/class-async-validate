@@ -46,7 +46,7 @@ export default class BaseValidate{
     /**
      * 生成需要校验的规则
      */
-    private createRules():ValidateRules{
+    createRules():ValidateRules{
         // 判断当前是否存在验证场景
         if (this.sceneArr&&this.sceneArr.length>0){
             const rules:ValidateRules = {};
