@@ -1,4 +1,4 @@
-import {CallbackData, ConfigOption, DataParams, SceneItem, Scenes, ValidateRules} from "@/lib/typing";
+import {CallbackData, ConfigOption, DataParams, SceneItem, Scenes, ValidateRules} from "./typing";
 import AsyncValidator, {ErrorList} from "async-validator";
 export default class BaseValidate{
     private sceneArr:SceneItem = null;
