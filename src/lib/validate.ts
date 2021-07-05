@@ -70,7 +70,7 @@ export default class BaseValidate{
         // 判断当前的场景是否存在
         if (!this.scenes().hasOwnProperty(scene)){
             // 当前的场景不存在，直接抛出一个异常
-            throw new Error(`this ${scene} is not exist`);
+            throw new Error(`this scene ${scene} is not exist`);
         }
         this.sceneArr = this.scenes()[scene];
         return this;
