@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
-    "target": "esnext",
+    "target": "es6",
+    "module": "CommonJS",
     "moduleResolution": "node",
     "baseUrl": "./",
     "outDir": "./dist",
@@ -11,9 +12,7 @@
     "types": [
       "node"
     ],
-    "paths": {
-      "@/*": ["src/*"]
-    },
+    "paths": {},
   },
   "include": [
     "src"
