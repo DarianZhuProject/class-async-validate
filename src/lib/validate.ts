@@ -1,5 +1,10 @@
 import {CallbackData, ConfigOption, DataParams, SceneItem, Scenes, ValidateRules} from "./typing";
-import AsyncValidator, {ErrorList} from "async-validator";
+// 异步验证器
+import AsyncValidator from "async-validator";
+
+/**
+ * 验证器基类
+ */
 export default class BaseValidate{
     private sceneArr:SceneItem = null;
 

@@ -1,4 +1,4 @@
-import {ErrorList, FieldErrorList, Rules, ValidateOption} from "async-validator";
+import { ErrorList, FieldErrorList, Rules, ValidateOption } from "async-validator";
 
 export interface Scenes {
     [key:string]:SceneItem
@@ -12,10 +12,7 @@ export interface DataParams{
 
 export type SceneItem = string[]|null|undefined;
 
-
 export type ConfigOption = ValidateOption;
-
-
 
 type CallBackError = {
     errors: ErrorList,
@@ -23,6 +20,6 @@ type CallBackError = {
 }
 
 export type CallbackData = [
-    CallBackError,
+    CallBackError|null,
     boolean
 ]
