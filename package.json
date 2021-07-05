@@ -16,6 +16,7 @@
     "async-validator",
     "egg-plugins"
   ],
+  "pre-commit": [],
   "author": "aibayanyu",
   "license": "MIT",
   "bugs": {
