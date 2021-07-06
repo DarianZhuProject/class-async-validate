@@ -1,6 +1,7 @@
 import {CallbackData, ConfigOption, DataParams, SceneItem, Scenes, ValidateRules} from "./typing";
 // 异步验证器
 import AsyncValidator from "async-validator";
+import ValidateFailError from "./validateFailError";
 
 /**
  * 验证器基类
@@ -70,5 +71,12 @@ export default abstract class BaseValidate{
         }
         this.sceneArr = this.scenes()[scene];
         return this;
+    }
+
+    /**
+     * 抛出异常处理
+     */
+    validateFail(message:string){
+        new ValidateFailError(message);
     }
 }
