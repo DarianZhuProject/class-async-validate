@@ -65,12 +65,42 @@ export default class HomeController extends Controller {
 }
 ```
 
+> 自定义一个异步处理规则
+
+```ts
+
+import { BaseValidate, ValidateRules, Scenes, CallbackMessage } from 'class-async-validate';
+
+export default class LoginValidate extends BaseValidate {
+  rules(): ValidateRules {
+    return {
+      phone: {
+        type: 'string',
+        asyncValidator: this.phone,
+      },
+    };
+  }
+
+  scenes(): Scenes {
+    return {
+
+    };
+  }
+
+  async phone(rule:ValidateRules, value) {
+    console.log(value, rule);
+    new CallbackMessage('错误了，你看看');
+  }
+}
+
+```
+
 ### JS使用方式
 
 > 创建一个`UserValidate.js`的文件
 ```js
 'use strict';
-const { BaseValidate } = require('class-async-validate');
+const { BaseValidate,CallbackMessage } = require('class-async-validate');
 class UserValidate extends BaseValidate {
   rules() {
     return {
@@ -80,6 +110,7 @@ class UserValidate extends BaseValidate {
         { type: 'string', required: true, message: '密码不能为空' },
         { min: 6, max: 20, message: '密码只能在6到20位之间' },
       ],
+        phone:{type:'string',asyncValidator:this.phone}
     };
   }
 
@@ -88,6 +119,14 @@ class UserValidate extends BaseValidate {
       create: [ 'username', 'password' ],
       update: [ 'id', 'username', 'password' ],
     };
+  }
+  
+  // 自定义校验规则
+  phone(rule,value){
+      if (value.length < 11){
+          new CallbackMessage("手机号格式不正确")
+      }
+      return true;
   }
 }
 
@@ -117,4 +156,3 @@ module.exports = HomeController;
 ### 需要注意的是
 
 * 场景不需要可以不设置。
-* 自定义规则目前是遵守`async-validator`的校验规则的方式，后续我们会增加新的自定义规则的方法。
