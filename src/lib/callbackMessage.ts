@@ -1,4 +1,4 @@
-export default class ValidateFailError{
+export default class CallbackMessage {
     constructor(message:string) {
         throw message;
     }
