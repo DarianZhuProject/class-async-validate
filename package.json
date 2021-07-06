@@ -1,6 +1,6 @@
 {
   "name": "class-async-validate",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "this is class-async-validate",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -35,7 +35,9 @@
     "dist/lib/typing.d.ts",
     "dist/lib/validate.d.ts",
     "dist/lib/typing.js",
-    "dist/lib/validate.js"
+    "dist/lib/validate.js",
+    "dist/lib/validateFailError.d.ts",
+    "dist/lib/validateFailError.js"
   ],
   "dependencies": {
     "async-validator": "^3.5.2"
