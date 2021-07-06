@@ -1,6 +1,6 @@
 {
   "name": "class-async-validate",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "this is class-async-validate",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
